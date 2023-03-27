@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5357808399340509398, guid: 67fd4ebd8ec070441bb3ea407459e793, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5557426240029705843, guid: 67fd4ebd8ec070441bb3ea407459e793, type: 3}
       propertyPath: m_Name
       value: PointOfView

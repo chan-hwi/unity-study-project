@@ -12,6 +12,7 @@ public class Observer : MonoBehaviour
     void Update()
     {
         if (!m_IsPlayerInRange) return;
+        Debug.Log("Player exists");
 
         // To adjust direction towards center of mass of the player
         Vector3 dir = player.position - transform.position + Vector3.up;
@@ -28,7 +29,7 @@ public class Observer : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.transform == player)
         {
             m_IsPlayerInRange = true;
         }
@@ -36,6 +37,9 @@ public class Observer : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        m_IsPlayerInRange = false;    
+        if (other.gameObject.transform == player)
+        {
+            m_IsPlayerInRange = false;    
+        }
     }
 }
